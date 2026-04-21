@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinical Intelligence System</title>
+    <link rel="stylesheet" href="/static/review.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="top-bar">
+        <h1>Clinical Intelligence System</h1>
+        <div class="pill-row">
+          <span class="pill" id="mode-pill">Loading...</span>
+          <span class="pill">FastAPI</span>
+          <span class="pill">gemma4:31b-cloud</span>
+          <span class="pill">BioBERT</span>
+          <span class="pill">ICD-10</span>
+        </div>
+      </header>
+
+      <section class="demo-section">
+        <article class="card input-card">
+          <p class="section-kicker">Clinical Note</p>
+          <textarea id="note-input">Patient has uncontrolled diabetes with kidney damage. Denies chest pain.</textarea>
+          <button id="analyze-button" class="primary-button" type="button">Analyze Note</button>
+        </article>
+
+        <article class="card pipeline-card">
+          <p class="section-kicker">Pipeline Stages</p>
+          <ul id="pipeline-steps" class="pipeline-list"></ul>
+        </article>
+      </section>
+
+      <section class="grid output-grid">
+        <article class="card">
+          <p class="section-kicker">Entities</p>
+          <pre id="entities-output" class="output-box">Waiting for analysis...</pre>
+        </article>
+        <article class="card">
+          <p class="section-kicker">ICD-10 Codes</p>
+          <pre id="codes-output" class="output-box">Waiting for analysis...</pre>
+        </article>
+        <article class="card">
+          <p class="section-kicker">Diagnosis + Risks</p>
+          <pre id="diagnosis-output" class="output-box">Waiting for analysis...</pre>
+        </article>
+        <article class="card">
+          <p class="section-kicker">Report</p>
+          <pre id="report-output" class="output-box">Waiting for analysis...</pre>
+        </article>
+      </section>
+    </main>
+
+    <script src="/static/review.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clinical-intelligence-system"
+version = "0.1.0"
+description = "Hackathon starter for clinical note analysis with ICD-10 coding."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "httpx>=0.27,<1.0",
+  "uvicorn[standard]>=0.30,<1.0",
+  "pydantic>=2.8,<3.0",
+  "python-multipart>=0.0.6",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<9",
+]
+models = [
+  "transformers>=4.40,<5.0",
+  "torch>=2.2,<3.0",
+  "huggingface_hub>=0.23,<1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]

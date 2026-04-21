@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+.env.*
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Python build artifacts
+*.egg-info/
+dist/
+build/
+*.egg
+
+# FAISS / model index binaries
+models/icd_index/index.faiss
+
+# OS
+.DS_Store
+Thumbs.db
+
