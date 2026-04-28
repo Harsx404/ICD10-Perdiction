@@ -9,7 +9,6 @@ Build a system that:
 - Generates medical documentation
 
 ---
-
 ### 2. Target Users
 - Doctors
 - Hospitals
@@ -23,7 +22,7 @@ Build a system that:
 #### 3.1 ICD-10 Auto Coding
 - Input: Clinical text
 - Output: ICD-10 codes (multi-label)
-- Accuracy target: >90%
+- Accuracy target: >85%
 
 #### 3.2 Clinical NLP Engine
 - Named Entity Recognition (NER)
