@@ -1,8 +1,6 @@
 """One-time script to build a FAISS index over the full ICD-10-CM dataset.
-
 Usage:
     python scripts/build_icd_index.py
-
 Input:
     Dataset/icd10orderfiles/icd10cm_codes_2026.txt
 
@@ -89,7 +87,6 @@ def build_index(records: list[dict[str, str]]) -> None:
         json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     log.info("Saved index to %s", OUTPUT_DIR)
-
 
 if __name__ == "__main__":
     if not DATASET_PATH.exists():
